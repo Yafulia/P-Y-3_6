@@ -24,23 +24,12 @@ class DomesticAnimal:
     def __del__(self):
         print('Меня убили')
 
-class Mammal(DomesticAnimal):
-    wool = random.choice(['long', 'short', 'middle'])
-
-    def get_wool(self):
-        return self.wool
 
 class Mammal(DomesticAnimal):
     wool = random.choice(['long', 'short', 'middle'])
-
-    def get_wool(self):
-        return self.wool
 
 class Bird(DomesticAnimal):
     wings = True
-
-    def is_Bird(self):
-        return self.wings
 
 class Duck(Bird):
     sound = 'Kriya-kriya-kriya!'
@@ -68,7 +57,6 @@ print(d_1.get_name())
 print(d_1.__dict__)
 
 d_2 = Duck(2, 'Ki')
-print(d_2.is_Bird())
 
 ch_1 = Chicken(1, 'ChiChi')
 print(ch_1.get_gender())
