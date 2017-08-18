@@ -5,6 +5,7 @@ class DomesticAnimal:
     gender = None # string
     age = 0
     sound = None
+    wings = False
 
     def __init__(self, age, name):
         self.age = age
@@ -20,6 +21,9 @@ class DomesticAnimal:
 
     def get_gender(self):
         return self.gender
+
+    def is_a_Bird(self):
+        return self.wings
 
     def __del__(self):
         print('Меня убили')
@@ -62,8 +66,10 @@ ch_1 = Chicken(1, 'ChiChi')
 print(ch_1.get_gender())
 
 g_1 = Goose(3, 'Gigi')
+print(g_1.is_a_Bird())
 
 c_1 = Cow(2, 'Zizi')
 go_1 = Goat(3, 'Boniya')
 sh_1 = Sheep(4, 'Zorro')
 p_1 = Pig(2, 'Pipi')
+print(p_1.is_a_Bird())
